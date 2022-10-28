@@ -1,0 +1,28 @@
+--cpu=Cortex-M4.fp
+"lesson_ese_work1_tim\startup_stm32f429xx.o"
+"lesson_ese_work1_tim\armlib_lock_glue.o"
+"lesson_ese_work1_tim\main.o"
+"lesson_ese_work1_tim\gpio.o"
+"lesson_ese_work1_tim\tim.o"
+"lesson_ese_work1_tim\stm32f4xx_it.o"
+"lesson_ese_work1_tim\stm32f4xx_hal_msp.o"
+"lesson_ese_work1_tim\stm32f4xx_hal_tim.o"
+"lesson_ese_work1_tim\stm32f4xx_hal_tim_ex.o"
+"lesson_ese_work1_tim\stm32f4xx_hal_rcc.o"
+"lesson_ese_work1_tim\stm32f4xx_hal_rcc_ex.o"
+"lesson_ese_work1_tim\stm32f4xx_hal_flash.o"
+"lesson_ese_work1_tim\stm32f4xx_hal_flash_ex.o"
+"lesson_ese_work1_tim\stm32f4xx_hal_flash_ramfunc.o"
+"lesson_ese_work1_tim\stm32f4xx_hal_gpio.o"
+"lesson_ese_work1_tim\stm32f4xx_hal_dma_ex.o"
+"lesson_ese_work1_tim\stm32f4xx_hal_dma.o"
+"lesson_ese_work1_tim\stm32f4xx_hal_pwr.o"
+"lesson_ese_work1_tim\stm32f4xx_hal_pwr_ex.o"
+"lesson_ese_work1_tim\stm32f4xx_hal_cortex.o"
+"lesson_ese_work1_tim\stm32f4xx_hal.o"
+"lesson_ese_work1_tim\stm32f4xx_hal_exti.o"
+"lesson_ese_work1_tim\system_stm32f4xx.o"
+--strict --scatter "Lesson_ESE_Work1_TIM\Lesson_ESE_Work1_TIM.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "Lesson_ESE_Work1_TIM.map" -o Lesson_ESE_Work1_TIM\Lesson_ESE_Work1_TIM.axf

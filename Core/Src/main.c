@@ -48,11 +48,18 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
+////uint32_t TIM_CRR_LOOP[4]={
+////  20000,//0%
+////  18000,//10%
+////  10000,//50%
+////  2000//90%
+////};
 uint32_t TIM_CRR_LOOP[4]={
-  20000,//0%
-  18000,//10%
+  //20000,//100%
+  18000,//90%
   10000,//50%
-  2000//90%
+  2000,//10%
+  0//0%
 };
 uint8_t state1;//auto
 uint8_t state2;//auto
@@ -100,8 +107,8 @@ int main(void)
   MX_GPIO_Init();
   MX_TIM4_Init();
   /* USER CODE BEGIN 2 */
-  HAL_TIM_PWM_Start(&htim4,TIM_CHANNEL_2);//PD13
-  HAL_TIM_PWM_Start(&htim4,TIM_CHANNEL_1);//PD12
+  HAL_TIM_PWM_Start(&htim4,TIM_CHANNEL_2);//PB7
+  HAL_TIM_PWM_Start(&htim4,TIM_CHANNEL_1);//PB6
 
   /* USER CODE END 2 */
 
@@ -133,8 +140,12 @@ int main(void)
         }while(Key2_Low());
       }
     }//if(Key2_Low())
+////    HAL_GPIO_WritePin(GPIOB,GPIO_PIN_6,GPIO_PIN_SET);
+////    HAL_Delay(1000);
+////    HAL_GPIO_WritePin(GPIOB,GPIO_PIN_6,GPIO_PIN_RESET);
+////		HAL_Delay(1000);
 
-    //Áä∂Ê?ÅÊåáÁ§?
+    //state pointer
     // HAL_GPIO_WritePin(GPIOB,GPIO_PIN_12,GPIO_PIN_SET);
     // HAL_Delay(200);
     // HAL_GPIO_WritePin(GPIOB,GPIO_PIN_12,GPIO_PIN_RESET);

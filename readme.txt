@@ -55,10 +55,19 @@ uint32_t TIM_CRR_LOOP[4]={
   10000,//50%
   2000//90%
 };
+修改：课程板LED接法为高电平点亮，因此，上述改为：
+uint32_t TIM_CRR_LOOP[4]={
+  //20000,//100%
+  18000,//90%
+  10000,//50%
+  2000,//10%
+  0//0%
+};
+
 uint8_t state1;//auto
 uint8_t state2;//auto
-HAL_TIM_PWM_Start(&htim4,TIM_CHANNEL_2);//PD13
-HAL_TIM_PWM_Start(&htim4,TIM_CHANNEL_1);//PD12
+HAL_TIM_PWM_Start(&htim4,TIM_CHANNEL_2);//PB7
+HAL_TIM_PWM_Start(&htim4,TIM_CHANNEL_1);//PB6
 
 main:
 TIM4->CCR2=TIM_CRR_LOOP[state2];//直接操作寄存器

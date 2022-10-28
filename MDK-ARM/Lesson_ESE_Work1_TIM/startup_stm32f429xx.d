@@ -1,0 +1,1 @@
+lesson_ese_work1_tim\startup_stm32f429xx.o: startup_stm32f429xx.s
